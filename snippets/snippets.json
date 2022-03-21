@@ -1,0 +1,231 @@
+{
+    "Generate json_serializable methods": {
+		"prefix": "jsonMethods",
+		"body": [
+			" factory ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}}.fromJson(Map<String, dynamic> json) =>",
+			"_$$1FromJson(json);",
+            "",
+			"Map<String, dynamic> toJson() => _$$1ToJson(this);"
+		],
+		"description": "Create factory fromJson and toJson to use with JsonSerializable"
+    },
+    "Generate json_serializable object class": {
+		"prefix": "serializableObject",
+		"body": [
+			"import 'package:equatable/equatable.dart';",
+			"import 'package:json_annotation/json_annotation.dart';",
+			"",
+			"part '$TM_FILENAME_BASE.g.dart';",
+			"",
+			"/// {@template $TM_FILENAME_BASE}",
+			"/// ${2:Object Explanation}",
+			"/// {@endtemplate}",
+			"@JsonSerializable()",
+			"class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}} extends Equatable {",
+			"/// {@macro $TM_FILENAME_BASE}",
+			"  const ${1}();",
+			"",
+			"  /// Factory which converts a [Map] into a [${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}].",
+			"  factory $1.fromJson(Map<String, dynamic> json) =>",
+			"    _$$1FromJson(json);",
+			"",
+			"/// Converts the [${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}] to [Map].",
+			"  Map<String, dynamic> toJson() => _$$1ToJson(this);",
+			"",
+			"/// An empty [${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}] object.",
+			"  static const empty = ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}();",
+			"",
+			"/// Creates a copy of [${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}].",
+			"${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g} copyWith() => $1(); ",
+			"",
+			"  @override",
+			"  List<Object?> get props => [];",
+			"}"
+		],
+		"description": "Create JsonSerializable object class extending Equatable w/ fromJson, toJson and copyWith() method pre-defined"
+	},
+    "Dart templete definition": {
+		"prefix": "docTempl",
+		"body": [
+			"/// {@template ${TM_FILENAME_BASE/(.*)/${1:/snakecase}/g}}",
+			"/// $2",
+			"/// {@endtemplate}"
+		],
+		"description": "Macro for the document template"
+	},
+    "Dart comment macro": {
+		"prefix": "macroComment",
+		"body": [
+			"/// {@macro ${TM_FILENAME_BASE/(.*)/${1:/snakecase}/g}}"
+		],
+		"description": "Create class comment using macro"
+	},
+    "Mock Class": {
+		"prefix": "mock",
+		"body": [
+			"class Mock${1} extends Mock implements ${1} {}"
+		],
+		"description": "Creates Mock for a class. Used in testing w/ Mocktail."
+	},
+    "When then answer ": {
+		"prefix": "whenThenAnswer",
+		"body": [
+			"when(() => ${1}).thenAnswer((_) async => ${2});"
+		],
+		"description": "Creates `when` method followed by thenAnswer. Used in testing w/ Mocktail."
+	},
+    "When then throw": {
+		"prefix": "whenThenThrow",
+		"body": [
+			"when(() => ${1}).thenThrow(Exception('e'));"
+		],
+		"description": "Creates when method followed by thenThrow. Used in testing w/ Mocktail."
+	},
+    "When then return": {
+		"prefix": "whenThenReturn",
+		"body": [
+			"when(() => ${1}).thenReturn(${2});"
+		],
+		"description": "Creates when method followed by thenReturn. Used in testing w/ Mocktail."
+	},
+    "Fake Classs": {
+		"prefix": "fakeClass",
+		"body": [
+			"class Fake${1:Subject} extends Fake implements ${1} {}"
+		],
+        "description": "Used to create fake classes. Used in testing."
+	},
+	"Fake State & Event": {
+		"prefix": "fakeStateEvent",
+		"body": [
+			"class Fake${1}State extends Fake implements ${1}State {}",
+			"",
+			"class Fake${1}Event extends Fake implements ${1}Event {}"
+		],
+        "description": "Fake class for Bloc/Cubit state, and Bloc event. Used in testing."
+	},
+    "Page View w/ Provider": {
+		"prefix": "pageViewProvider",
+		"body": [
+			"import 'package:flutter/material.dart';",
+			"import 'package:flutter_bloc/flutter_bloc.dart';",
+			"\n\n",
+			"class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} extends StatelessWidget {",
+			"const $1({Key? key}) : super(key: key);",
+			"  ",
+			"   static Route route() => MaterialPageRoute<void>(builder: (_) => const $1());",
+			"  ",
+			"   @override",
+			"   Widget build(BuildContext context) {",
+			"     return BlocProvider<${2:Subcject}${3|Bloc,Cubit|}>(",
+			"       create: (_) => ${2:Subcject}${3|Bloc,Cubit|}(${4:args}),",
+			"       child: const $1View(),",
+			"     );",
+			"   }",
+			"}",
+			"  ",
+			"  class $1View extends StatelessWidget {",
+			"   const $1View({Key? key}) : super(key: key);",
+			"  ",
+			"   @override",
+			"   Widget build(BuildContext context) {",
+			"       return const SizedBox($5);",
+			"   }",
+			"}"
+		],
+        "description": "Page w/ View where Bloc is propagated down. Includes route."
+	},
+    "Page View": {
+		"prefix": "pageView",
+		"body": [
+			"import 'package:flutter/material.dart';",
+			"\n\n",
+			"class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} extends StatelessWidget {",
+			"const $1({Key? key}) : super(key: key);",
+			"  ",
+			"   static Route route() => MaterialPageRoute<void>(builder: (_) => const $1());",
+			"  ",
+			"   @override",
+			"   Widget build(BuildContext context) {",
+			"     return const $1View();",
+			"   }",
+			"}",
+			"  ",
+			"  class $1View extends StatelessWidget {",
+			"   const $1View({Key? key}) : super(key: key);",
+			"  ",
+			"   @override",
+			"   Widget build(BuildContext context) {",
+			"       return const SizedBox($5);",
+			"   }",
+			"}"
+		],
+        "description": "Page w/ View. Includes route."
+	},
+    "Class Property w/ Comment": {
+		"prefix": "classProperty",
+		"body": [
+			"/// ${1:Comment}",
+			"///",
+			"/// Example: ${2}",
+			"final ${3:Type} ${4:propertyName}"
+		],
+        "description": "Property of the class w/ comment."
+	},
+	"Property Comment": {
+		"prefix": "propertycomment",
+		"body": [
+			"/// ${1:Comment}",
+			"///",
+			"/// Example: ${2}"
+		],
+        "description": "Comment w/ the example."
+	},
+	"Empty Object": {
+		"prefix": "emptyObject",
+		"body": [
+			"/// An empty [${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}] object.",
+			"static const ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} empty = ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}();"
+		],
+        "description": "Empty object for a model."
+	},
+    "Object model test": {
+		"prefix": "objectModelTest",
+		"body": [
+			"// ignore_for_file: prefer_const_constructors",
+			"import 'package:test/test.dart';",
+			"",
+			"void main() {",
+			"  group('${1:${TM_FILENAME_BASE/(.*)_test/${1:/pascalcase}/}}', () {",
+			"    const data = <String, dynamic>{};",
+			"",
+			"    test('can be instantiated', () {",
+			"      final ${2:${TM_FILENAME_BASE/(.*)_test/${1:/camelcase}/}} = $1.empty;",
+			"",
+			"      expect($2, isNotNull);",
+			"    });",
+			"",
+			"    test('supports value equality', () {",
+			"      final $2 = $1.empty;",
+			"      final ${2}2 = $2.copyWith();",
+			"",
+			"      expect($2, equals(${2}2));",
+			"    });",
+			"",
+			"    test('can be converted to json', () {",
+			"      final $2 = $1.empty;",
+			"",
+			"      expect($2.toJson(), equals(data));",
+			"    });",
+			"",
+			"    test('can be obtained from json', () {",
+			"      final original = $1.empty;",
+			"      final $2 = $1.fromJson(data);",
+			"",
+			"       expect(original, equals($2));",
+			"    });",
+			"  });",
+			"}"
+		]
+	}
+}
