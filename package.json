@@ -1,0 +1,41 @@
+{
+    "name": "flutter-snippets",
+    "displayName": "Flutter Snippets",
+    "description": "Collection of Flutter snippets used on a day to day basis by Flutter developers working commercially.",
+    "version": "1.0.0",
+    "icon": "logo.png",
+    "publisher": "Julia Debecka",
+    "engines": {
+        "vscode": "^1.56.0"
+    },
+    "keywords": [
+        "Flutter",
+        "Dart",
+        "Snippets",
+        "Snippet"
+    ],
+    "galleryBanner": {
+        "color": "#272631",
+        "theme": "dark"
+    },
+    "homepage": "https://github.com/jdebecka/flutter_snippets",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jdebecka/flutter_snippets"
+    },
+    "bugs": {
+        "url": "https://github.com/jdebecka/flutter_snippets/issues",
+        "email": "debeckajulia@gmail.com"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "dart",
+                "path": "./snippets/snippets.json"
+            }
+        ]
+    }
+}
