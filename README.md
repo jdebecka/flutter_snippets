@@ -2,18 +2,20 @@
 
 Flutter Snippet extension will allow you code and test your Flutter/Dart projects faster. There are multiple test snippets as well as Widget oriented ones.
 
+## Acknowledgement
+
 This extension was created in collaboration w/ @korzonkiee
 
 ## Usability
 
-## Flutter
+### Flutter
 
 - [Bloc](https://pub.dev/packages/bloc)
 - [Mocktail](https://pub.dev/packages/mocktail)
 - Flutter Widgets
 - Flutter Testing
 
-## Dart
+### Dart
 
 - Object Models
 - Comments
