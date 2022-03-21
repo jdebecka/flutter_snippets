@@ -226,6 +226,7 @@
 			"    });",
 			"  });",
 			"}"
-		]
+		],
+		"description": "Creates test for an object model."
 	}
 }
