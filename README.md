@@ -44,9 +44,9 @@ This extension was created in collaboration w/ @korzonkiee
 | emptyObject         | Empty object for a model. |
 | objectModelTest     | Creates test for an object model. |
 
-------
+-----
 
-## Preview 
+## Preview
 
 ![CleanShot 2022-03-21 at 8 07 00](https://user-images.githubusercontent.com/57728399/159345947-e05687e3-084a-401d-b044-bfc9577b5337.gif)
 
