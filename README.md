@@ -41,3 +41,15 @@ This extension was created in collaboration w/ @korzonkiee
 | propertycomment     | Comment w/ an example. |
 | emptyObject         | Empty object for a model. |
 | objectModelTest     | Creates test for an object model. |
+
+------
+
+## Preview 
+
+![CleanShot 2022-03-21 at 8 07 00](https://user-images.githubusercontent.com/57728399/159345947-e05687e3-084a-401d-b044-bfc9577b5337.gif)
+
+![CleanShot 2022-03-21 at 8 08 56](https://user-images.githubusercontent.com/57728399/159346360-e3d9f675-46c5-4972-971b-1388d3e767b7.gif)
+
+![CleanShot 2022-03-21 at 8 10 14](https://user-images.githubusercontent.com/57728399/159346690-e8830719-39a6-4acb-8458-5628ecdd79b3.gif)
+
+![CleanShot 2022-03-21 at 8 11 06](https://user-images.githubusercontent.com/57728399/159346913-6e868438-023c-4dc6-9519-93e5257e4c2f.gif)
