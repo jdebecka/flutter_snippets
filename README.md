@@ -6,7 +6,7 @@ Flutter Snippet extension will allow you code and test your Flutter/Dart project
 
 This extension was created in collaboration w/ @korzonkiee
 
-## Usability
+## Dependencies
 
 ### Flutter
 
@@ -29,6 +29,7 @@ This extension was created in collaboration w/ @korzonkiee
 | ------------------- | ------------------------------------------------------------------- |
 | jsonMethods         | Creates factory fromJson and toJson to use with JsonSerializable.
 | serializableObject  | Creates JsonSerializable object class extending Equatable w/ fromJson, toJson and copyWith() method pre-defined. |
+| jsonMethodsWithComments | Create factory fromJson and toJson to use with JsonSerializable with comments. |
 | docTempl            | Creates macro for the document template. |
 | macroComment        | Creates class comment using macro. |
 | mock                | Creates Mock for a class. Used in testing w/ Mocktail. |
@@ -43,6 +44,9 @@ This extension was created in collaboration w/ @korzonkiee
 | propertycomment     | Comment w/ an example. |
 | emptyObject         | Empty object for a model. |
 | objectModelTest     | Creates test for an object model. |
+| materialPage        | Creates Material page. |
+| materialRoute       | Creates Material page route. |
+| fadeTransitionPage  | Creates Material page w/ a fade transition. |
 
 -----
 
