@@ -6,7 +6,7 @@ Flutter Snippet extension will allow you code and test your Flutter/Dart project
 
 This extension was created in collaboration w/ @korzonkiee
 
-## Usability
+## Dependencies
 
 ### Flutter
 
@@ -29,6 +29,7 @@ This extension was created in collaboration w/ @korzonkiee
 | ------------------- | ------------------------------------------------------------------- |
 | jsonMethods         | Creates factory fromJson and toJson to use with JsonSerializable.
 | serializableObject  | Creates JsonSerializable object class extending Equatable w/ fromJson, toJson and copyWith() method pre-defined. |
+| jsonMethodsWithComments | Create factory fromJson and toJson to use with JsonSerializable with comments. |
 | docTempl            | Creates macro for the document template. |
 | macroComment        | Creates class comment using macro. |
 | mock                | Creates Mock for a class. Used in testing w/ Mocktail. |
@@ -43,6 +44,9 @@ This extension was created in collaboration w/ @korzonkiee
 | propertycomment     | Comment w/ an example. |
 | emptyObject         | Empty object for a model. |
 | objectModelTest     | Creates test for an object model. |
+| materialPage        | Creates Material page. |
+| materialRoute       | Creates Material page route. |
+| fadeTransitionPage  | Creates Material page w/ a fade transition. |
 
 -----
 
@@ -55,3 +59,7 @@ This extension was created in collaboration w/ @korzonkiee
 ![CleanShot 2022-03-21 at 8 10 14](https://user-images.githubusercontent.com/57728399/159346690-e8830719-39a6-4acb-8458-5628ecdd79b3.gif)
 
 ![CleanShot 2022-03-21 at 8 11 06](https://user-images.githubusercontent.com/57728399/159346913-6e868438-023c-4dc6-9519-93e5257e4c2f.gif)
+
+![CleanShot 2022-05-10 at 10 10 03](https://user-images.githubusercontent.com/57728399/167573869-046c55cc-eaf5-4411-b44d-5a72c3d68038.gif)
+
+![CleanShot 2022-05-10 at 10 08 04](https://user-images.githubusercontent.com/57728399/167573908-1676380d-27c6-4a5b-a455-0dfe01abc075.gif)
