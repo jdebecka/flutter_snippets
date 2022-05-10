@@ -1,7 +1,18 @@
 {
     "Generate json_serializable methods": {
+		"prefix": "jsonMethods",
+		"body": [
+			" factory ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}}.fromJson(Map<String, dynamic> json) =>",
+			"_$$1FromJson(json);",
+            "",
+			"Map<String, dynamic> toJson() => _$$1ToJson(this);"
+		],
+		"description": "Create factory fromJson and toJson to use with JsonSerializable"
+    },
+	"Generate json_serializable methods w/ comments": {
 		"prefix": "jsonMethodsWithComments",
 		"body": [
+			"  /// Factory which converts a [Map] into a [${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}].",
 			" factory ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}}.fromJson(Map<String, dynamic> json) =>",
 			"_$$1FromJson(json);",
             "",
@@ -9,17 +20,6 @@
 			"Map<String, dynamic> toJson() => _$$1ToJson(this);"
 		],
 		"description": "Create factory fromJson and toJson to use with JsonSerializable with comments."
-    },
-	"Generate json_serializable methods w/ comments": {
-		"prefix": "jsonMethods",
-		"body": [
-			"  /// Factory which converts a [Map] into a [${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}].",
-			" factory ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/g}}.fromJson(Map<String, dynamic> json) =>",
-			"_$$1FromJson(json);",
-            "",
-			"Map<String, dynamic> toJson() => _$$1ToJson(this);"
-		],
-		"description": "Create factory fromJson and toJson to use with JsonSerializable"
     },
     "Generate json_serializable object class": {
 		"prefix": "serializableObject",
