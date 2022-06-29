@@ -125,7 +125,7 @@
 			"class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} extends StatelessWidget {",
 			"const $1({Key? key}) : super(key: key);",
 			"  ",
-			"   static Route route() => MaterialPageRoute<void>(builder: (_) => const $1());",
+			"   static Route<dynamic> route() => MaterialPageRoute<void>(builder: (_) => const $1());",
 			"  ",
 			"   @override",
 			"   Widget build(BuildContext context) {",
@@ -155,7 +155,7 @@
 			"class ${1:${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}} extends StatelessWidget {",
 			"const $1({Key? key}) : super(key: key);",
 			"  ",
-			"   static Route route() => MaterialPageRoute<void>(builder: (_) => const $1());",
+			"   static Route<dynamic> route() => MaterialPageRoute<void>(builder: (_) => const $1());",
 			"  ",
 			"   @override",
 			"   Widget build(BuildContext context) {",
@@ -244,21 +244,21 @@
 	"Material Page Route": {
 		"prefix": "materialPage",
 		"body": [
-		"  static Page page() => const MaterialPage<void>(child: ${1:PageName}());"
+		"  static Page<dynamic> page() => const MaterialPage<void>(child: ${1:PageName}());"
 		],
 		"description": "Creates Material page."
 	},
 	"Material Route": {
 		"prefix": "materialRoute",
 		"body": [
-		"  static Route route() => MaterialPageRoute<void>(builder: (_) => const ${1:PageName}());"
+		"  static Route<dynamic> route() => MaterialPageRoute<void>(builder: (_) => const ${1:PageName}());"
 		],
 		"description": "Creates Material page route."
 	},
 	"Fade Transition Page": {
 		"prefix": "fadeTransitionPage",
 		"body": [
-			"  static Page page() => CustomTransitionPage<void>(",
+			"  static Page<dynamic> page() => CustomTransitionPage<void>(",
 			"        child: const ${1:PageName}(),",
 			"        transitionsBuilder: (context, animation, secondaryAnimation, child) =>",
 			"            FadeTransition(opacity: animation, child: child),",

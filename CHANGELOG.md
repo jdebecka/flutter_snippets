@@ -1,3 +1,6 @@
+### 1.0.3
+- Adjust route type to satisfy new dart analyzer
+
 ### 1.0.2
 - Add Snippet for Material Page Route
 - Add Snippet for Material Route
