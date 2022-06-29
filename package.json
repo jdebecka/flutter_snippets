@@ -2,7 +2,7 @@
     "name": "jdebecka-flutter-snippets",
     "displayName": "Flutter Snippets",
     "description": "Collection of Flutter snippets used on a day to day basis by Flutter developers working commercially.",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "icon": "logo.png",
     "publisher": "jdebecka",
     "engines": {
